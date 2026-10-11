@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NorteTech Express | Eletrônicos e acessórios em Porto Velho</title>
+<style>
+:root{--bg:#fff8f1;--card:#fff;--ink:#241b33;--mute:#6e6478;--line:#f0e4d7;--pri:#ff5a36;--pri2:#e8441f;--acc:#ffc24b;--ok:#12a150;--deep:#241b4a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171021;--card:#221a30;--ink:#f6eefb;--mute:#b3a6c2;--line:#352a47;--pri:#ff6b47;--pri2:#ff8566}}
+:root[data-theme="dark"]{--bg:#171021;--card:#221a30;--ink:#f6eefb;--mute:#b3a6c2;--line:#352a47;--pri:#ff6b47;--pri2:#ff8566}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1160px;margin:auto;padding:0 18px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:14px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;line-height:1}.logo svg{flex:none}.lt{display:flex;flex-direction:column;gap:4px}.ln{font-weight:800;font-size:21px;letter-spacing:-.6px;color:var(--ink)}.ln em{font-style:normal;color:var(--pri)}.lx{font-size:10px;font-weight:700;letter-spacing:.32em;color:var(--mute);text-transform:uppercase}.ds{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.35}
+@media(max-width:480px){.bar{gap:8px}.bar .ic{width:38px;height:38px}.ln{font-size:18px}.lx{font-size:9px;letter-spacing:.22em}.logo{gap:8px}.logo svg{width:34px;height:34px}}
+nav{display:flex;gap:22px;margin-left:auto;color:var(--mute);font-size:15px}
+nav a:hover{color:var(--pri)}
+.btn{border:0;border-radius:10px;padding:11px 18px;font-weight:600;font-size:15px;cursor:pointer;background:var(--pri);color:#fff}
+.btn:hover{background:var(--pri2)}
+.btn.o{background:transparent;color:var(--pri);border:1.5px solid var(--pri)}
+.ic{position:relative;background:none;border:1px solid var(--line);color:var(--ink);border-radius:10px;width:42px;height:42px;cursor:pointer;font-size:18px}
+.badge{position:absolute;top:-6px;right:-6px;background:var(--acc);color:#111;border-radius:99px;font-size:11px;font-weight:700;min-width:19px;height:19px;display:grid;place-items:center}
+.menu{display:none}
+.hero{background:linear-gradient(135deg,#241b4a,#4a2a6e 55%,#8a3a6b);color:#fff;padding:64px 0}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(30px,5vw,50px);line-height:1.1;letter-spacing:-1px}
+.hero p{opacity:.9;margin:16px 0 26px;max-width:480px}
+.hero .btn{background:var(--pri);color:#fff}
+.hero .btn.o{background:transparent;color:#fff;border-color:#fff;margin-left:8px}
+.shot{aspect-ratio:1;border-radius:24px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;font-size:72px}
+section{padding:54px 0}
+h2{font-size:26px;letter-spacing:-.5px;margin-bottom:6px}
+.sub{color:var(--mute);margin-bottom:24px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 16px;border-radius:99px;cursor:pointer;font-size:14px}
+.chip.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.p:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(15,27,45,.12)}
+.img{aspect-ratio:1;background:linear-gradient(135deg,#ffe9d6,#ffd1b3);display:grid;place-items:center;font-size:44px;position:relative}
+.tag{position:absolute;top:10px;left:10px;background:var(--acc);color:#111;font-size:11px;font-weight:700;padding:3px 9px;border-radius:99px}
+.info{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.info small{color:var(--mute)}
+.stars{color:var(--acc);font-size:13px}
+.price{font-size:19px;font-weight:800}
+.price s{font-size:13px;font-weight:400;color:var(--mute);margin-left:6px}
+.info .btn{margin-top:auto;width:100%}
+.ben{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.b{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.b i{font-style:normal;font-size:26px}
+.b h3{font-size:16px;margin:8px 0 4px}
+.b p{color:var(--mute);font-size:14px}
+.dep{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.news{background:var(--deep);color:#fff;border-radius:20px;padding:36px;display:flex;gap:20px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.news form{display:flex;gap:8px;flex:1;min-width:260px;max-width:440px}
+.news input{flex:1;border:0;border-radius:10px;padding:12px;font-size:15px;min-width:0}
+.news .btn{background:var(--acc);color:#111}
+footer{border-top:1px solid var(--line);background:var(--card);padding:34px 0 28px;color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+#ov{position:fixed;inset:0;background:rgba(0,0,0,.5);display:none;z-index:30}
+#dr{position:fixed;top:0;right:0;bottom:0;width:min(400px,100%);background:var(--card);z-index:31;transform:translateX(100%);transition:.25s;display:flex;flex-direction:column;padding:18px;padding-top:calc(18px + env(safe-area-inset-top,0px));padding-bottom:calc(18px + env(safe-area-inset-bottom,0px))}
+body.open #dr{transform:none}body.open #ov{display:block}
+#items{flex:1;overflow:auto;margin:14px 0}
+.row{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.row b{flex:1}
+.row button{border:1px solid var(--line);background:none;color:var(--ink);width:26px;height:26px;border-radius:7px;cursor:pointer}
+.tot{display:flex;justify-content:space-between;font-size:18px;font-weight:800;margin-bottom:12px}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.ben{grid-template-columns:repeat(2,1fr)}.dep{grid-template-columns:1fr}
+.hero .wrap{grid-template-columns:1fr}.shot{display:none}.hero{padding:44px 0}
+nav{display:none;position:absolute;top:64px;left:0;right:0;background:var(--card);flex-direction:column;padding:16px 18px;border-bottom:1px solid var(--line);gap:14px}
+nav.on{display:flex}.menu{display:block;margin-left:auto}nav{margin-left:0}.bar .ic.c{margin-left:0}}
+@media(max-width:480px){.grid{gap:10px}.info{padding:10px}.price{font-size:16px}section{padding:38px 0}.news{padding:24px}.hero .btn.o{margin:10px 0 0}}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.sr{display:none;border-top:1px solid var(--line);padding:10px 0}.sr.on{display:block}
+.sr input,.md input,.md select{width:100%;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:10px;padding:12px;font-size:16px}
+.fav{position:absolute;top:8px;right:8px;width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#bbb;font-size:16px;cursor:pointer}.fav.on{color:var(--pri)}
+.img{cursor:pointer}
+#tst{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,30px);background:var(--deep);color:#fff;padding:12px 18px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:60;font-size:14px;max-width:90%}#tst.on{opacity:1;transform:translate(-50%,0)}
+.md{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;z-index:50;align-items:center;justify-content:center;padding:16px}.md.on{display:flex}
+.mc{background:var(--card);border-radius:18px;padding:22px;width:min(460px,100%);max-height:90%;overflow:auto;position:relative}
+#mb{display:flex;flex-direction:column;gap:8px}.mc .x{position:absolute;top:12px;right:12px}.mc h2{margin:0}.mc label{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--mute);margin-bottom:8px}
+.fabs{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;gap:10px;z-index:15}
+.fab{width:50px;height:50px;border-radius:50%;border:0;background:var(--deep);color:#fff;font-size:20px;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.25)}.fab.wa{background:#25d366}#up{display:none}#up.on{display:block}
+@media(max-width:900px){#sb{margin-left:auto}.menu{margin-left:0}}
+.pay{display:flex;flex-direction:column;gap:8px;margin-bottom:10px}
+.mc label.po{flex-direction:row;align-items:center;gap:10px;border:1.5px solid var(--line);border-radius:12px;padding:12px;cursor:pointer;color:var(--ink);margin:0}
+.mc label.po input{width:auto}.po span{display:flex;flex-direction:column}.po small{color:var(--mute)}
+.po:has(input:checked){border-color:var(--pri);background:rgba(255,90,54,.08)}
+.tt{display:flex;justify-content:space-between;font-size:18px;margin:6px 0 10px}
+.p small.ps{color:var(--ok);font-weight:600}
+.warn{display:flex;gap:10px;align-items:flex-start;background:#fff4d6;border:1.5px solid var(--acc);color:#5a3b00;border-radius:12px;padding:12px 14px;font-size:14px;margin-top:16px}
+.mc .warn{margin:0 0 10px}.warn b{font-size:18px;line-height:1.2}
+.loc{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:99px;font-size:14px;margin-bottom:14px}
+</style>
+</head>
+<body>
+<header><div class="wrap bar">
+<a class="logo" href="#" aria-label="NorteTech Express"><svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a2a6e"/><stop offset="1" stop-color="#241b4a"/></linearGradient></defs><rect width="40" height="40" rx="11" fill="url(#lg)"/><path d="M11 30V12l18 17.5V15" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M23.5 14.5 29 8.5l5.5 6" fill="none" stroke="#ff5a36" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="lt"><span class="ln">Norte<em>Tech</em></span><span class="lx">Express</span></span></a>
+<nav id="nav"><a href="#produtos">Produtos</a><a href="#vantagens">Vantagens</a><a href="#depoimentos">Depoimentos</a><a href="#contato">Contato</a></nav>
+<button class="ic" id="sb" onclick="toggleSearch()" aria-label="Buscar">🔍</button><button class="ic" onclick="toggleTheme()" aria-label="Tema">🌓</button><button class="ic menu" onclick="nav.classList.toggle('on')" aria-label="Menu">☰</button>
+<button class="ic c" onclick="document.body.classList.add('open')" aria-label="Carrinho">🛒<span class="badge" id="cnt">0</span></button>
+</div><div class="sr" id="sr"><div class="wrap"><input id="q" type="search" placeholder="Buscar produtos..." oninput="draw();if(this.value)produtos.scrollIntoView()"></div></div></header>
+
+<div class="hero"><div class="wrap">
+<div><span class="loc">📍 Entregas somente em Porto Velho – RO</span><h1>Tecnologia e utilidades com entrega expressa em Porto Velho</h1>
+<p>Fones, lanternas e acessórios com preço justo. Escolha no site, finalize pelo WhatsApp e receba na sua porta.</p>
+<a class="btn" href="#produtos">Ver produtos</a><a class="btn o" href="#" onclick="wa('Olá! Gostaria de mais informações.');return false">Falar conosco</a></div>
+<div class="shot">🛍️</div></div></div>
+
+<section id="vantagens"><div class="wrap"><div class="ben">
+<div class="b"><i>🚚</i><h3>Entrega em Porto Velho</h3><p>Atendemos somente Porto Velho (PVH) por enquanto.</p></div>
+<div class="b"><i>🔒</i><h3>Compra segura</h3><p>Pagamento protegido.</p></div>
+<div class="b"><i>💳</i><h3>Parcele em até 12x</h3><p>Pix, cartão ou dinheiro.</p></div>
+<div class="b"><i>↩️</i><h3>Troca garantida</h3><p>7 dias para devolver.</p></div>
+</div></div></section>
+
+<section id="produtos" style="padding-top:0"><div class="wrap">
+<h2>Nossos produtos</h2><p class="sub">Escolha uma categoria e adicione ao carrinho.</p>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap"><h2>Formas de pagamento</h2><p class="sub">Escolha como preferir pagar.</p><div class="ben">
+<div class="b"><i>⚡</i><h3>Pix</h3><p>Pagamento na hora, com confirmação imediata.</p></div>
+<div class="b"><i>💳</i><h3>Crédito e débito</h3><p>Na maquininha, no ato da entrega.</p></div>
+<div class="b"><i>💵</i><h3>Dinheiro</h3><p>Pague ao entregador, com troco se precisar.</p></div>
+<div class="b"><i>🔒</i><h3>Ambiente seguro</h3><p>Seus dados protegidos.</p></div>
+</div><div class="warn"><b>❗</b><span><strong>Importante:</strong> cartão de crédito, cartão de débito e dinheiro são pagos direto ao entregador, no momento da entrega. O Pix é pago antes, no momento do pedido.</span></div></div></section>
+<section id="depoimentos" style="padding-top:0"><div class="wrap">
+<h2>O que dizem os clientes</h2><p class="sub">Depoimentos de exemplo.</p>
+<div class="dep">
+<div class="b"><div class="stars">★★★★★</div><p>“Atendimento excelente e entrega antes do prazo.”</p><h3>Cliente 1</h3></div>
+<div class="b"><div class="stars">★★★★★</div><p>“Produto de ótima qualidade, recomendo.”</p><h3>Cliente 2</h3></div>
+<div class="b"><div class="stars">★★★★★</div><p>“Compra fácil e segura pelo celular.”</p><h3>Cliente 3</h3></div>
+</div></div></section>
+
+
+<footer id="contato"><div class="wrap"><div><b style="color:var(--ink)">NorteTech Express</b><br>📍 Entregas somente em Porto Velho – RO</div>
+<div>Atendimento pelo WhatsApp<br><a href="#" style="text-decoration:underline" onclick="wa('Olá!');return false">WhatsApp: (69) 98456-0482</a></div><div>© 2026 NorteTech Express</div></div></footer>
+
+<div id="ov" onclick="document.body.classList.remove('open')"></div>
+<div class="md" id="md" onclick="if(event.target==this)closeM()"><div class="mc"><button class="ic x" onclick="closeM()" aria-label="Fechar">✕</button><div id="mb"></div></div></div>
+<div id="tst"></div>
+<div class="fabs"><button class="fab" id="up" onclick="scrollTo({top:0})" aria-label="Topo">↑</button><button class="fab wa" onclick="wa('Olá! Preciso de ajuda.')" aria-label="WhatsApp">💬</button></div>
+<aside id="dr"><div style="display:flex;justify-content:space-between;align-items:center"><h2 style="margin:0">Seu carrinho</h2><button class="ic" onclick="document.body.classList.remove('open')">✕</button></div>
+<div id="items"></div><div class="tot"><span>Total</span><span id="tot">R$ 0,00</span></div>
+<button class="btn" id="fin" onclick="openCk()">Finalizar compra</button><button class="btn o" style="margin-top:8px" onclick="cart={};upd()">Esvaziar carrinho</button></aside>
+
+<script>
+const P=[
+["Fone Lenovo LE253","Áudio",69.98,0,"🎧","","Fone de ouvido Bluetooth sem fio TWS Lenovo LE253 com som HD de alta fidelidade, cancelamento de ruído e bateria de longa duração."],
+["Fone Bluetooth M10","Áudio",19.99,0,"🎧","","Fone M10 TWS Bluetooth 5.1 com estojo de carregamento multifuncional que também funciona como Power Bank para recarregar seu celular."],
+["Lanterna 3 em 1","Utilidades",19.98,0,"🔦","","Lanterna tática multifuncional 3 em 1 com LED de alta potência, recarregável via USB e ideal para emergências ou uso diário."],
+["Meia de Compressão","Saúde e Esporte",24.99,0,"🧦","","Meia de compressão graduada para melhorar a circulação sanguínea, aliviar o cansaço nas pernas e prevenir varizes."]];
+const f=v=>"R$ "+v.toFixed(2).replace(".",",");
+let cat="Todos",cart={};
+const cats=["Todos",...new Set(P.map(p=>p[1]))];
+function draw(){
+grid.innerHTML=P.map((p,i)=>({p,i})).filter(o=>(cat=='Todos'||o.p[1]==cat)&&o.p[0].toLowerCase().includes(q.value.toLowerCase())).map(({p,i})=>
+`<div class="p"><div class="img" onclick="qv(${i})">${p[4]}${p[5]?`<span class="tag">${p[5]}</span>`:""}<button class="fav ${fv[i]?'on':''}" onclick="event.stopPropagation();fav(${i})" aria-label="Favoritar">♥</button></div><div class="info"><b>${p[0]}</b><small class="ds">${p[6]}</small><span class="stars">★★★★★</span>
+<div class="price">${f(p[2])}${p[3]?`<s>${f(p[3])}</s>`:""}</div><small>ou ${MAXP}x de ${f(p[2]/MAXP)} sem juros</small><button class="btn" onclick="add(${i})">Adicionar</button></div></div>`).join('')||'<p class="sub">Nenhum produto encontrado.</p>'}
+function add(i){cart[i]=(cart[i]||0)+1;upd();toast(P[i][0]+' adicionado ao carrinho ✔')}
+function chg(i,d){cart[i]+=d;if(cart[i]<=0)delete cart[i];upd()}
+function upd(){let t=0,n=0;const k=Object.keys(cart);
+items.innerHTML=k.length?k.map(i=>{t+=P[i][2]*cart[i];n+=cart[i];return `<div class="row"><span style="font-size:26px">${P[i][4]}</span><b>${P[i][0]}<br><small style="font-weight:400">${f(P[i][2])}</small></b><button onclick="chg(${i},-1)">−</button>${cart[i]}<button onclick="chg(${i},1)">+</button></div>`}).join(""):'<p class="sub">Carrinho vazio.</p>';
+cnt.textContent=n;tot.textContent=f(t);fin.disabled=!n;save()}
+const WA='5569984560482';let fv={},tt,last='';
+const esc=s=>String(s).replace(/[&<>'"]/g,c=>'&#'+c.charCodeAt(0)+';');
+function save(){try{localStorage.setItem('cart',JSON.stringify(cart));localStorage.setItem('fv',JSON.stringify(fv))}catch(e){}}
+function loadS(){try{cart=JSON.parse(localStorage.getItem('cart')||'{}');fv=JSON.parse(localStorage.getItem('fv')||'{}');const th=localStorage.getItem('theme');if(th)document.documentElement.dataset.theme=th}catch(e){}}
+function toast(m){tst.textContent=m;tst.classList.add('on');clearTimeout(tt);tt=setTimeout(()=>tst.classList.remove('on'),1800)}
+function fav(i){fv[i]=!fv[i];save();draw();toast(fv[i]?'Salvo nos favoritos ♥':'Removido dos favoritos')}
+function toggleSearch(){sr.classList.toggle('on');if(sr.classList.contains('on'))q.focus();else{q.value='';draw()}}
+function toggleTheme(){const d=document.documentElement,dk=d.dataset.theme?d.dataset.theme=='dark':matchMedia('(prefers-color-scheme:dark)').matches;d.dataset.theme=dk?'light':'dark';try{localStorage.setItem('theme',d.dataset.theme)}catch(e){}}
+function wa(m){const u='https://wa.me/'+WA+'?text='+encodeURIComponent(m);if(!window.open(u,'_blank'))location.href=u}
+function openM(){md.classList.add('on')}function closeM(){md.classList.remove('on')}
+function qv(i){const p=P[i];mb.innerHTML=`<div class='img' style='border-radius:14px;font-size:80px;cursor:default'>${p[4]}</div><h2>${p[0]}</h2><span class='stars'>★★★★★</span><div class='price'>${f(p[2])}${p[3]?`<s>${f(p[3])}</s>`:''}</div><p class='sub'>${p[6]}</p><button class='btn' onclick='add(${i});closeM()'>Adicionar ao carrinho</button><button class='btn o' onclick='add(${i});closeM();openCk()'>Comprar agora</button>`;openM()}
+const DISC=0,MAXP=12,PIXKEY='chave-pix-da-loja';
+function ckTotal(){let t=0;for(const i in cart)t+=P[i][2]*cart[i];return t}
+function openCk(){const t=ckTotal();if(!t)return;document.body.classList.remove('open');mb.innerHTML=`<h2>Finalizar pedido</h2><div class='warn'><b>📍</b><span>Entregamos <strong>somente em Porto Velho (PVH)</strong> por enquanto.</span></div><form onsubmit='done(event)'><label>Nome<input name='n' required></label><label>WhatsApp<input name='w' inputmode='tel' required placeholder='(00) 00000-0000'></label><label>Rua e número<input name='r' required placeholder='Ex.: Rua das Flores, 123'></label><label>Bairro<input name='b' required></label><label>Cidade<input name='ci' value='Porto Velho - RO' readonly></label><label>Complemento (opcional)<input name='co' placeholder='Apto, bloco, casa dos fundos...'></label><label>Ponto de referência<input name='rf' required placeholder='Ex.: ao lado da padaria, portão azul'></label><div class='pay'><label class='po'><input type='radio' name='p' value='Pix' checked onchange='pay()'><span><b>Pix</b><small>pague agora · confirmação imediata</small></span></label><label class='po'><input type='radio' name='p' value='Cartão de crédito' onchange='pay()'><span><b>Cartão de crédito</b><small>pago na entrega · até ${MAXP}x</small></span></label><label class='po'><input type='radio' name='p' value='Cartão de débito' onchange='pay()'><span><b>Cartão de débito</b><small>pago na entrega</small></span></label><label class='po'><input type='radio' name='p' value='Dinheiro' onchange='pay()'><span><b>Dinheiro</b><small>pago na entrega</small></span></label></div><div class='warn' id='pw' style='display:none'><b>❗</b><span>Esta forma de pagamento é feita <strong>direto ao entregador</strong>, no momento da entrega.</span></div><label id='pq' style='display:none'>Parcelas<select name='x'></select></label><label id='pt' style='display:none'>Troco para quanto? (opcional)<input name='tr' inputmode='decimal' placeholder='Ex.: 100'></label><div class='tt'><span>Total</span><b id='ptot'></b></div><button class='btn' style='width:100%'>Confirmar pedido</button></form>`;openM();pay()}
+function pay(){const t=ckTotal(),m=document.querySelector('input[name=p]:checked').value,q2=document.getElementById('pq'),sl=q2.querySelector('select');q2.style.display=m=='Cartão de crédito'?'flex':'none';document.getElementById('pt').style.display=m=='Dinheiro'?'flex':'none';document.getElementById('pw').style.display=m=='Pix'?'none':'flex';if(m=='Cartão de crédito'&&!sl.options.length)for(let n=1;n<=MAXP;n++)sl.add(new Option(n+'x de '+f(t/n)+' sem juros',n));ptot.textContent=f(m=='Pix'?t*(1-DISC):t)}
+function done(ev){ev.preventDefault();const d=new FormData(ev.target),m=d.get('p'),t0=ckTotal(),t=m=='Pix'?t0*(1-DISC):t0,id='#'+Math.floor(1000+Math.random()*9000),it=Object.keys(cart).map(i=>cart[i]+'x '+P[i][0]).join(', '),x=m=='Cartão de crédito'?' em '+d.get('x')+'x':'',tr=m=='Dinheiro'&&d.get('tr')?' (troco para R$ '+d.get('tr')+')':'',na=m=='Pix'?'':' - pagar ao entregador na entrega';last=`Pedido ${id}: ${it}. Total ${f(t)}. Pagamento: ${m}${x}${tr}${na}. Cliente: ${d.get('n')} - ${d.get('w')}. Entrega: ${d.get('r')}, ${d.get('b')}, ${d.get('ci')}.${d.get('co')?' Compl.: '+d.get('co')+'.':''} Referência: ${d.get('rf')}`;cart={};upd();const ex=m=='Pix'?`<p class='sub'>Pague <b>${f(t)}</b> com o código Pix abaixo e envie o comprovante pelo WhatsApp.</p><input id='pc' readonly value='${PIXKEY}-${id.slice(1)}'><button class='btn o' onclick='cp()'>Copiar código Pix</button>`:`<div class='warn'><b>❗</b><span>Tenha <strong>${f(t)}</strong> em mãos: o pagamento (${m}${x}${tr}) é feito direto ao entregador na entrega.</span></div>`;mb.innerHTML=`<h2>Pedido ${id} recebido ✔</h2><p class='sub'>Obrigado, ${esc(d.get('n'))}! Toque abaixo para enviar o pedido pelo WhatsApp e confirmar a entrega.</p>${ex}<button class='btn' onclick='wa(last)'>Enviar pedido pelo WhatsApp</button>`}
+function cp(){pc.select();try{navigator.clipboard.writeText(pc.value)}catch(e){document.execCommand('copy')}toast('Código copiado ✔')}
+addEventListener('keydown',e=>{if(e.key=='Escape'){closeM();document.body.classList.remove('open')}});
+addEventListener('scroll',()=>up.classList.toggle('on',scrollY>400));
+nav.addEventListener('click',()=>nav.classList.remove('on'));
+loadS();draw();upd();
+</script>
+</body>
+</html>
